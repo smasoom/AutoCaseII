@@ -13,15 +13,7 @@ export default function Input(props) {
       strarr=strarr.reverse();
       let newText= strarr.join("");
       setText(newText);
-      // const handleReverse = (event) => {
-      //  
-      //   let strArr = text.split("");
-      //   /* Reverse array*/
-      //   strArr = strArr.reverse();
-      //   /* Convert array to string*/
-      //   let newText = strArr.join("");
-      //   setText(newText);
-      // };
+    
     }
     const clearfunc=()=>
     { let newText= "";
@@ -46,14 +38,14 @@ export default function Input(props) {
 
 
   return (
-    <>
-    <div className="container">
+    <div >
+    <div className="container"   >
       <div className="mb-3">
      <h1>{props.heading}</h1>
   
     <textarea className="input" id="mybox" onChange={handleonchange} value={text} rows="10" cols="170" ></textarea>
  
-   </div>
+   </div >
    <button className="btn btn-primary mx-2"  onClick={uperfunc}>UPPERCASE</button>
    <button className="btn btn-success mx-2" onClick={lowerfunc}>LOWERCASE</button>
    <button className="btn btn-danger mx-2" onClick={clearfunc}>CLEAR TEXT</button>
@@ -64,6 +56,6 @@ export default function Input(props) {
     <p> {text.split(" ").length} words and {text.length} characters</p>
     <p>max time to read the input text second { 0.008* text.split("").length }</p>
     <p>Preview of input text {text}</p>
-    </>
+    </div>
   )
 }
